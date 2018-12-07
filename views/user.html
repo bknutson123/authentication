@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div style="text-align: center">
+        <div class="form-container" ng-controller="myController">
+            <p id="sectionTitle" class="form-header">User Profile</p>
+            <form method="POST" action="/user/update">
+                <label>Username:</label>
+                <input type="text" class="rounded" id="username" name="username" ng-model="user.username" disabled><br>
+                <label>Email:</label>
+                <input type="email" id="email" class="rounded" name="email" ng-model="user.email"><br>
+                <label>Favorite Color:</label>
+                <input type="text" id="color" class="rounded" name="color" ng-model="user.color"><br>
+                <label>Tell us something about yourself:</label>
+                <input type="text" id="info" name="info" class="rounded" ng-model="user.info"><br>
+                <input type="submit" id="save" value="Save">
+            </form>
+        </div>
+        <form method="POST" action="/user/delete">
+            <input type="submit" id="delete" value="Delete User">
+        </form>
+        <hr>
+        <span id="userMsg">
+    <%= msg %>
+    </span>
+        <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+        <script src="/javascripts/my_app.js"></script>
+        <br><a id="homeLink" href="/">Home</a>
+    </div>
+</body>
+
+</html>

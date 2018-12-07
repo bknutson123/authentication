@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div style="text-align: center">
+        <div ng-controller="myController">
+            <h2 id="welcomeText">Welcome. You are Logged In as
+                <%= username %>
+            </h2>
+            <a id="logoutLink" href="/logout">logout</a>
+            <a id="editLink" href="/user">Edit User</a>
+        </div>
+        <span id="info">Here is some info about you:
+            <%= info %>
+        </span>
+        <hr>
+        <span id="indexMsg">
+        <%= msg %>
+    </span>
+        <hr>
+        <span id="colorText">
+    Your favorite color is:
+        <%= color %>
+      </span>
+        <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+        <script src="/javascripts/my_app.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+
+.rounded {
+    border-radius:15px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+}
+
+a {
+  color: #00B7FF;
+}
